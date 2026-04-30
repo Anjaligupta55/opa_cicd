@@ -2,7 +2,8 @@ package main
 
 # Deny if public access is enabled
 deny[msg] {
-    input.public == true
+    # input.public == true
+    input.public==false  
     msg = "Public access is not allowed"
 }
 
