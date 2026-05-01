@@ -4,7 +4,7 @@ import rego.v1
 
 # Deny if public access is enabled
 deny contains msg if {
-    # input.public == false
+    # input.public == true
     input.public==false  
     msg = "Public access is not allowed"
 }
