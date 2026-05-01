@@ -15,9 +15,9 @@ jobs:
 
       - name: Install Conftest
         run: |
-          LATEST=$(curl -sL https://api.github.com/repos/open-policy-agent/conftest/releases/latest | grep tag_name | cut -d '"' -f 4 | sed 's/v//')
-          wget -q "https://github.com/open-policy-agent/conftest/releases/download/v${LATEST}/conftest_${LATEST}_Linux_x86_64.tar.gz"
-          tar xzf conftest_${LATEST}_Linux_x86_64.tar.gz
+          CONFTEST_VERSION="0.56.0"
+          wget -q "https://github.com/open-policy-agent/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz"
+          tar xzf conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
           sudo mv conftest /usr/local/bin/
 
       - name: Run OPA Policy Check
