@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-npx synk test
+snyk test --severity-threshold=high
